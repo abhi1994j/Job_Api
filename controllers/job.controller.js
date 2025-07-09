@@ -4,12 +4,8 @@ const getJobs = async (req, res, next) => {
   const minSalary = req.query.minSalary || 0;
   console.log(minSalary);
   try {
-    const jobs = await JobsModel.find({
-      salary: {
-        $gte: minSalary
-      }
-    })
-    
+    const jobs = await JobsModel.find()
+
     res.json({
       success: true,
       message: "Get job api",
