@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 const port = process.env.PORT;
 const app = express();
 
-mongoose.connect('mongodb+srv://abhibaban4:qQBvdvJtmwgGcPAn@cluster0.rzoqtxf.mongodb.net/') 
+mongoose.connect(process.env.DB_URL) 
   .then(() => console.log('Connected!'));
   
 app.use(express.json());
