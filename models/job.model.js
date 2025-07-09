@@ -33,4 +33,5 @@ const jobsSchema = mongoose.Schema(
 )
 const JobsModel = mongoose.model("jobs" , jobsSchema);
 // console.log(mongoose);
+
 export default JobsModel ;
